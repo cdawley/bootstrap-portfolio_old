@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="icon" href="assets/images/c-ico.png">
 
     <title>Cdawley's home Gitpages</title>
 
@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Mina:400,700" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="assets/starter-template.css" rel="stylesheet">
+    <!--<link href="assets/starter-template.css" rel="stylesheet">-->
 
 </head>
 
@@ -45,14 +45,14 @@
 
             <!--list items make-up navbar links-->
             <li class="nav-item active">
-                <a class="nav-link" href="#" onclick="toggleVisible('about_me');">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" id ="#home-id" href="#">Home <span class="sr-only">(current)</span></a><!--onclick="toggleVisible('about_me');"-->
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#" onclick="toggleVisible('contact_me');">Contact</a>
+                <a class="nav-link" id="#contact-id" href="#">Contact</a> <!----onclick="toggleVisible('contact_me');!---->
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" onclick="toggleVisible('portfolio');">Portfolio</a>
+                <a class="nav-link" id="#portfolio-id" href="#">Portfolio</a> <!---onclick="toggleVisible('portfolio');"!--->
             </li>
 
             <li class="nav-item dropdown">
@@ -64,7 +64,6 @@
                     <a class="dropdown-item" href="http://www.linkedin.com/in/cdawley" target="_none">LinkedIn - cdawley</a>
                     <a class="dropdown-item" href="http://cdawley.github.com" target="_none">Github - cdawley</a>
                     <a class="dropdown-item" href="http://christiandawley.twitter.com" target="_none">Twitter - christiandawley</a>
-                    <a class="dropdown-item" href="http://www.facebook.com/dawleychristianc" target="_none">Facebook - dawleychristianc</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="https://www.paypal.me/christiandawley">PayPal.me - christiandawley</a>
                 </div>
@@ -92,22 +91,10 @@
 
     <div class="custom_content" id="about_me">
               <h1>About Me</h1>
-        <p class="lead">My name is Christian Dawley. I'm not sure what your name is, but if you're reading this you've reached my page. I've been interested in writing code since before I was a teenager (perhaps its worth mentioning that I'm not longer in my twenties, let alone a teenager, so it's been a little while now.) Some guy at the local library in the town where I was raised offered to teach me a little HTML, and for whatever reason it stuck. Until recently, writing code hasn't been much more than a hobby. I've worked a number of dull and uninspiring jobs (restaurants, warehouses, etc.) and attended some community college courses (both in the New Hampshire seacoast and one summer in Santa Fe, New Mexico.)</p>
-
-        <div id="image">
+        <div id="image responsive">
             <img id="bio-photo" src="assets/images/cdawley.jpg">
-        </div>
-
-        <!--<img id="bio-photo" src="assets/images/cdawley.jpg" alt="photo of Christian Dawley">-->
-
-        <p class="lead">A Statistics professor at a local community college told me a about a "Coding Bootcamp" offered through the University of New Hampshire. I decided to check it out. I'm currently enrolled (it's my reason for making this page, actually) and as if the idea of writing code professionally wasn't enticing to begin with, I grow more and more fond of the idea with every new piece of knowledge I acquire. Since first being introduced to the internet, the amount of attention I've given it, and more specifically coding, has ebbed & flowed: anywhere between a dull trickle and a roaring deluge. I'm proud to say being a developer is now something I'm pretty passionate about.</p>
-
-        <p class="lead">I've got some other interests. I like the 'visual arts', some forms more than others. I've drawn since I was a kid, and at some point my interest in that and computers intermingled and I got interested in graphic design. For being self-taught, I'd say I'm fairly well-versed in the usage of a number of Adobe software products (most prominently Illustrator & Photoshop) I like taking photographs, and if I wanted to sound more pretentious than I no doubt already do, I'd call myself an amateur photographer. I'm not super-into typography in a general way, but the art of letters, particularly when expressed using the medium of aerosol paint, is something I really enjoy.</p>
-
-        <p class="lead">I've lived in New Hampshire most of my life, but I've made extended trips to and spent a significant amount of time in the Southwestern United States (really New Mexico, and nearly always the Northern part of that state.) I like music, and when I can I like to see it performed in person. Some favorites are: hip-hop; jazz; some house music; and the music of the Grateful Dead. (Some might consider this an eccelectic to mix, others might find it makes as much sense to them as I feel it does.) I visited Brazil in 2017, and developed this cultural fascination with the country, its history, and the people who live there. I've attempted (with varying degrees of success) to learn Portuguese when I can.</p>
-
-        <p class="lead">I'll round out this biographical account by stating that I've got a small dog (her name is Pokey), a car on its last leg (it's a Buick), and I'm ready to do this @#!% (I mean write code, but I guess this could apply to whatever @#!% can or needs to be done.)</p>
-    </div>
+        </div><p class="lead">My name is Christian Dawley.  I’m a self-motivated problem solver with an eye for design. Having had an interest how things work since childhood––especially languages of both the human- and machine-variety.) Revisiting coding as an adult, I’ve sought to turn my penchant for puzzles & problems of all sorts into a marketable skill as a software developer. This love for my work, combined with life-experience where I've consistently triumphed over adversity in various forms, make me a unique asset to any project! I didn't know who you were when I wrote this, and I probably still don't now, but if we don't know one another yet I hope we can talk soon! Get in touch with me, I'm ready to work.</p>
+       </div>
 
         <!--Portfolio-->
         <div class="custom_content d-none" id="portfolio">

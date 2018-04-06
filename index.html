@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Mina:400,700" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="assets/starter-template.css" rel="stylesheet">
+    <!--<link href="assets/starter-template.css" rel="stylesheet">-->
 
 </head>
 
@@ -45,14 +45,14 @@
 
             <!--list items make-up navbar links-->
             <li class="nav-item active">
-                <a class="nav-link" href="#" onclick="toggleVisible('about_me');">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" id="#home-item">Home<span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#" onclick="toggleVisible('contact_me');">Contact</a>
+                <a class="nav-link" href="#" id="contact-item">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" onclick="toggleVisible('portfolio');">Portfolio</a>
+                <a class="nav-link" href="#" id="portfolio-item">Portfolio</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -81,7 +81,7 @@
 </div>
 
 <!--main page index-->
-<main role="main" class="container">
+<main role="main" class="container-fluid">
 
     <!--<div class="starter-template">-->
 
@@ -90,7 +90,7 @@
     <!--</div>-->
 
 
-    <div class="custom_content" id="about_me">
+    <div class="container-fluid" id="home-cont">
         <h1>About Me</h1>
         <p class="lead">My name is Christian Dawley. I'm not sure what your name is, but if you're reading this you've
             reached my page. I've been interested in writing code since before I was a teenager (perhaps its worth
@@ -100,8 +100,8 @@
             dull and uninspiring jobs (restaurants, warehouses, etc.) and attended some community college courses (both
             in the New Hampshire seacoast and one summer in Santa Fe, New Mexico.)</p>
 
-        <div id="image">
-            <img id="bio-photo" src="assets/images/cdawley.jpg">
+        <div id="image-responive">
+            <img id="bio-photo" src="assets/images/cdawley.jpg" class="image-responsive float-left">
         </div>
 
         <!--<img id="bio-photo" src="assets/images/cdawley.jpg" alt="photo of Christian Dawley">-->
@@ -111,34 +111,15 @@
             for making this page, actually) and as if the idea of writing code professionally wasn't enticing to begin
             with, I grow more and more fond of the idea with every new piece of knowledge I acquire. Since first being
             introduced to the internet, the amount of attention I've given it, and more specifically coding, has ebbed &
-            flowed: anywhere between a dull trickle and a roaring deluge. I'm proud to say being a developer is now
-            something I'm pretty passionate about.</p>
+            flowed: anywhere between a dull trickle and a roaring deluge. I'm proud to say being a developer something I'm
+            happily working to be</p>
 
-        <p class="lead">I've got some other interests. I like the 'visual arts', some forms more than others. I've drawn
-            since I was a kid, and at some point my interest in that and computers intermingled and I got interested in
-            graphic design. For being self-taught, I'd say I'm fairly well-versed in the usage of a number of Adobe
-            software products (most prominently Illustrator & Photoshop) I like taking photographs, and if I wanted to
-            sound more pretentious than I no doubt already do, I'd call myself an amateur photographer. I'm not
-            super-into typography in a general way, but the art of letters, particularly when expressed using the medium
-            of aerosol paint, is something I really enjoy.</p>
-
-        <p class="lead">I've lived in New Hampshire most of my life, but I've made extended trips to and spent a
-            significant amount of time in the Southwestern United States (really New Mexico, and nearly always the
-            Northern part of that state.) I like music, and when I can I like to see it performed in person. Some
-            favorites are: hip-hop; jazz; some house music; and the music of the Grateful Dead. (Some might consider
-            this an eccelectic to mix, others might find it makes as much sense to them as I feel it does.) I visited
-            Brazil in 2017, and developed this cultural fascination with the country, its history, and the people who
-            live there. I've attempted (with varying degrees of success) to learn Portuguese when I can.</p>
-
-        <p class="lead">I'll round out this biographical account by stating that I've got a small dog (her name is
-            Pokey), a car on its last leg (it's a Buick), and I'm ready to do this @#!% (I mean write code, but I guess
-            this could apply to whatever @#!% can or needs to be done.)</p>
     </div>
 </main>
 
     <!--Portfolio-->
 
-<div class="custom_content d-none" id="portfolio">
+<div class="custom_content d-none" id="portfolio-cont">
         <h1>Portfolio</h1>
         <p class="lead">
 
@@ -223,7 +204,7 @@
         <!--Contact form-->
 
     <div class="container">
-        <div class="custom_content d-none" id="contact_me">
+        <div class="custom_content d-none" id="contact-cont">
             <h1>Contact Me</h1>
             <p class="lead">
             <form>
@@ -258,7 +239,44 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <!--custom javascript functions for this page-->
-<script src="assets/script.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+    //Jquery selectors
+$(document).ready( function() {
+
+    let contHome = $("home-cont");
+    let contContact = $("#contact-cont");
+    let contPortfolio = $("#portfolio-cont");
+
+    console.log(this);
+    console.log($("nav #home-item"));
+
+$(this).$("#home-item").on("click", function() {
+contContact.addClass("d-none");
+contPortfolio.addClass("d-none");
+contHome.removeClass("d-none");
+});
+
+$(this).$("#portfolio-item").on("click", function() {
+contHome.addClass("d-none");
+contContact.addClass("d-none");
+contPortfolio.removeClass("d-none");
+});
+
+$(this).$("nav #contact-item").on("click", function()  {
+contHome.addClass("d-none");
+contPortfolio.addClass("d-none");
+contContact.removeClass("d-none");
+});
+
+
+
+
+});
+
+
+</script>
+<!--<script src="assets/script.js" type="text/javascript"></script>-->
 
 </body>
 </html>
